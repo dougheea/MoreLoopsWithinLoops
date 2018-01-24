@@ -178,7 +178,7 @@ def vee(r):
     For purposes of "lining up", assume r is a single digit.
     """
     # ------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # Done: 4. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # IMPLEMENTATION RESTRICTION:
@@ -186,6 +186,20 @@ def vee(r):
     #   in this or the other problems in this module, as doing so would
     #   defeat the goal of providing practice at loops within loops.
     # ------------------------------------------------------------------
+    count = r
+    space = 1
+    for k in range(r):
+        for j in range(space):
+            print(end=' ')
+        for h in range(count):
+            print(h + 1, end='')
+            if h == count - 1:
+                print('-', end='')
+        for j in range(count):
+            print(count - j, end='')
+        count = count - 1
+        space = space + 1
+        print('')
 
 
 def run_test_numbers_constant_forward():
